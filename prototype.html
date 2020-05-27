@@ -22,7 +22,7 @@
 
       const link = Hero("link") */
 
-      const heroMethods = {
+      /* const heroMethods = {
         saludar: function () {
           console.log(`Super hero ${this.name}`)
         },
@@ -32,7 +32,27 @@
         hero.name = name
         return hero
       }
-      const link = Hero("link")
+      const link = Hero("link") */
+
+      /* function Hero(name) {
+        const hero = Object.create(Hero.prototype)
+        hero.name = name
+        return hero
+      }
+      Hero.prototype.saludar = function () {
+        console.log(`Soy superheroe! ${this.name}`)
+      } */
+
+      function Hero(name) {
+        // const hero = Object.create(Hero.prototype)
+        this.name = name
+        // return this
+      }
+      Hero.prototype.saludar = function () {
+        console.log(`New! ${this.name}`)
+      }
+      const zelda = new Hero("Zelda")
+      zelda.saludar()
     </script>
   </body>
 </html>
